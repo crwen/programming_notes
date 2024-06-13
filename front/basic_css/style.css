@@ -1,0 +1,168 @@
+/* inheritance */
+
+* {
+  margin: 2px;
+  padding: 2px;
+}
+
+body {
+  position: relative;
+}
+
+.container {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+h1,
+h2 p,
+li {
+  font-family: sans-serif;
+}
+
+.external-p {
+  color: red;
+}
+
+.external-h1 {
+  color: #1098ad;
+  font-size: 26px;
+  text-transform: uppercase;
+  font-style: italic;
+}
+
+.external-h2 {
+  color: #1098ad;
+  font-size: 24px;
+  text-transform: uppercase;
+  font-style: italic;
+}
+
+p {
+  font-size: 16px;
+  line-height: 1.2;
+}
+
+#footer {
+  font-size: 14px;
+}
+
+#footer .copyright {
+  font-style: italic;
+  text-align: center;
+}
+
+article {
+  background-color: #f7f7f7;
+  border-top: dotted #1098ad;
+  border-bottom: dotted #1098ad;
+  border-left: solid #1098ad;
+  border-right: solid #1098ad;
+  margin: 2px;
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+  font-size: 14px;
+}
+
+/* li:first-child { */
+/*   font-weight: bold; */
+/* } */
+/**/
+/* li:last-child { */
+/*   color: #1098ad; */
+/* } */
+/**/
+/* li:nth-child(odd) { */
+/*   font-style: italic; */
+/* } */
+
+a:link {
+  color: #1098ad;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #1098ad;
+}
+
+a:hover {
+  color: orangered;
+  font-weight: bold;
+  text-decoration: underline dotted orangered;
+}
+
+a:active {
+  background-color: black;
+  font-style: italic;
+}
+
+.box-model {
+  text-align: center;
+  background: cyan;
+  border: 5px solid red;
+  padding: 20px;
+  margin: 10px 20px;
+  width: 50%;
+  float: left;
+}
+
+.like-btn {
+  font-size: 16px;
+  padding: 12px;
+  position: absolute;
+
+  bottom: 0;
+  right: 0;
+}
+
+.box-image {
+  /* be taken out of the document flow.
+   * All the other element will basicly float around it.
+   * collapsing height
+   */
+  float: left;
+}
+
+.clear {
+  clear: left;
+}
+
+.clearfix::after {
+  clear: left;
+  content: "";
+  display: block;
+}
+
+.flex-container {
+  display: flex;
+  align-items: stretch;
+  /* justify-content: space-between; */
+  justify-content: flex-start;
+  gap: 30px;
+}
+.flex-item {
+  background: #ddd;
+
+  /*
+  DEFAULT:
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
+  */
+}
+.flex-item1 {
+  align-self: flex-start;
+}
+
+.grid-container {
+  display: grid;
+  /* grid-template-columns: auto 1fr 1fr; */
+  grid-template-columns: repeat(3, 1fr);
+}
+/* collapsing margins */

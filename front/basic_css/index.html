@@ -1,0 +1,311 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="style.css" rel="stylesheet" />
+    <title>CSS</title>
+
+    <style>
+      .internal-p {
+        color: orange;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <article>
+        <p>Selector Declaration block</p>
+        <ul>
+          <li>Declaration / Style</li>
+          <li>
+            <ul>
+              <li>propery1: value1</li>
+              <li>propery2: value2</li>
+              <li>......</li>
+              <li>properyn: valuen</li>
+            </ul>
+          </li>
+        </ul>
+      </article>
+      <article>
+        <h1 class="external-h1">Places to write CSS</h1>
+        <p>There three places to write CSS</p>
+        <ul>
+          <li>Inline CSS: Write CSS code inside the element</li>
+          <li>Internal CSS: Write CSS in style element within head</li>
+          <li>
+            External CSS: Write CSS in other file, and use link element to
+            introduce
+          </li>
+        </ul>
+
+        <p style="color: blue">Inline CSS. Should never be used</p>
+        <p class="internal-p">
+          Internal CSS. Write in style element within head
+        </p>
+        <p class="external-p">External CSS. Write in other file</p>
+      </article>
+
+      <article>
+        <h1 class="external-h1">Selector</h1>
+        <ul>
+          <li>Element selector</li>
+          <li>ID selector</li>
+          <li>Class selector</li>
+        </ul>
+
+        <h2 class="external-h1">Combinators and separators</h2>
+        <ul>
+          <li>+ (Next-sibling combinator)</li>
+          <li>
+            > (Child combinator): It matches only those elements matched by the
+            second selector that are the direct children of elements matched by
+            the first.
+          </li>
+          <li>|| (Column combinator)</li>
+          <li>~ (Subsequent sibling combinator)</li>
+          <li>" " (Descendant combinator)</li>
+          <li>| (Namespace separator)</li>
+        </ul>
+
+        <p>
+          You can see more selector
+          <a
+            href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_selectors"
+            >here</a
+          >
+        </p>
+      </article>
+      <article>
+        <h1 class="external-h1">Box Model</h1>
+        <ul>
+          <li><strong>Content</strong>: Text, images, etc.</li>
+          <li>
+            <strong>Border</strong>: A line around the element, still
+            <strong>inside</strong> of the element
+          </li>
+          <li>
+            <strong>Padding</strong>: Invisible space around the content,
+            <strong>inside</strong> of the element
+          </li>
+          <li>
+            <strong>Margin</strong>: Space <strong>outside</strong> of the
+            element, between elements
+          </li>
+          <li>
+            <strong>Fill area</strong>: Area that gets filled with
+            <strong>background color</strong> or
+            <strong>background image</strong>
+          </li>
+        </ul>
+        <p>Final element width = padding + width + border</p>
+        <p>Final element height = padding + height + border</p>
+        <div class="clearfix">
+          <img
+            src="img/box_model.png"
+            class="box-image"
+            alt="Box Model"
+            width="400px"
+          />
+
+          <div class="box-model">content</div>
+          <!-- <div class="clear"></div> -->
+        </div>
+
+        <h2 class="external-h1">Box Type</h2>
+        <ul>
+          <li>
+            <strong>Inline boxes</strong>: Occupy the exactlly width that is
+            needed for its content
+          </li>
+          <li>
+            <strong>Block-Level boxes/elements</strong>: Occupy all the space
+            that they can. And they basiclly create line breaks after them
+          </li>
+        </ul>
+      </article>
+
+      <article>
+        <h1 class="external-h1">Layout</h1>
+        <p>Three ways of building layouts with CSS</p>
+        <ul>
+          <li>
+            <strong>Float Layouts</strong>: using the float CSS property. Still
+            used, but getting outdated fast.
+          </li>
+          <li>
+            <strong>Flexbox</strong>: Laying out elements in a 1-dimensional row
+            without using floats. Perfect for component layout.
+          </li>
+          <li>
+            <strong>CSS Grid</strong>: For laying out element in a fully-fiedged
+            2-dimensional grid. Perfect for page layouts and complex components.
+          </li>
+        </ul>
+
+        <div class="flex-container">
+          <ul class="flex-item flex-item1">
+            <li>Flex Container</li>
+            <li>Flex Items</li>
+            <li>Main Axis</li>
+            <li>Cross Axis</li>
+          </ul>
+
+          <div class="flex-item">
+            <p><strong>flex container</strong></p>
+            <ul>
+              <li>
+                gap: To create space between items, without using margin
+                <ul>
+                  <li>0</li>
+                  <li>length</li>
+                </ul>
+              </li>
+
+              <li>
+                justify-content: To align items along main axis(horizontally, by
+                default)
+                <ul>
+                  <li>flex-start</li>
+                  <li>flex-end</li>
+                  <li>center</li>
+                  <li>space-between</li>
+                  <li>space-around</li>
+                  <li>space-evenly</li>
+                </ul>
+              </li>
+              <li>
+                align-items: To align items along cross axis(vertically, by
+                default)
+                <ul>
+                  <li>stretch</li>
+                  <li>flex-start</li>
+                  <li>flex-end</li>
+                  <li>center</li>
+                  <li>baseline</li>
+                </ul>
+              </li>
+              <li>flex-direction</li>
+              <li>flex-wrap</li>
+              <li>align-content</li>
+            </ul>
+          </div>
+          <div class="flex-item">
+            <p><strong>flex items</strong></p>
+            <ul>
+              <li>
+                align-self: To overwrite align-items for individual flex items
+                <ul>
+                  <li>auto</li>
+                  <li>stretch</li>
+                  <li>flex-start</li>
+                  <li>flex-end</li>
+                  <li>center</li>
+                  <li>baseline</li>
+                </ul>
+              </li>
+
+              <li>flex-grow: To allow an element to grow(0/1+, no/yes)</li>
+              <li>flex-shrink: To allow an element to shrink(0/1+, no/yes)</li>
+              <li>
+                flex-basis: To define an item's width, instead of the width
+                property
+              </li>
+              <li>
+                flex: Recommended shorthand for flex-grow, -shrink, -basis.
+                <ul>
+                  <li>0 1 auto</li>
+                  <li>int int len</li>
+                </ul>
+              </li>
+              <li>
+                order: Controls order of items. -1 makes item first, 1 makes it
+                last
+              </li>
+            </ul>
+          </div>
+        </div>
+      </article>
+      <article>
+        <h2 class="external-h1">Grid</h2>
+        <div class="grid-container">
+          <div class="grid-item">
+            <ul>
+              <li>Grid cell</li>
+              <li>Grid lines</li>
+              <li>Grid track(row/column)</li>
+              <li>Gutters(gaps)</li>
+            </ul>
+          </div>
+          <div class="grid-item">
+            <p>Grid container</p>
+            <ul>
+              <li><strong>grid-template-rows</strong></li>
+              <li><strong>grid-template-columns</strong></li>
+              <li><strong>row-gap</strong></li>
+              <li><strong>column-gap</strong></li>
+              <li><strong>justify-items</strong></li>
+              <li><strong>align-items</strong></li>
+              <li><strong>justify-content</strong></li>
+              <li><strong>align-content</strong></li>
+            </ul>
+          </div>
+          <div class="grid-item">
+            <p>Grid items</p>
+            <ul>
+              <li>
+                <ul>
+                  <li>
+                    <strong>grid-row</strong>
+                    <ul>
+                      <li>start line / end line</li>
+                      <li>span number</li>
+                    </ul>
+                  </li>
+
+                  <li>
+                    <strong>grid-row</strong>: To place a grid item into a
+                    specific cell, based on line numbers. <em>span</em> keyword
+                    can be used to span an item across more cells
+                    <ul>
+                      <li>start line / end line</li>
+                      <li>span number</li>
+                    </ul>
+                  </li>
+                  <li>
+                    <strong>justify-self: </strong>
+                    <ul>
+                      <li>stretch</li>
+                      <li>start</li>
+                      <li>center</li>
+                      <li>end</li>
+                    </ul>
+                  </li>
+                  <li>
+                    <strong
+                      >align-self: To overwrite
+                      <em
+                        >justify-items / align-items for single items</em
+                      ></strong
+                    >
+                    <ul>
+                      <li>stretch</li>
+                      <li>start</li>
+                      <li>center</li>
+                      <li>end</li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </article>
+      <button class="like-btn">❤️Like</button>
+      <footer id="footer">
+        <p class="copyright">copyright &copy; 2024 by xxx</p>
+      </footer>
+    </div>
+  </body>
+</html>
