@@ -1,2 +1,1 @@
-
-My rust notes.
+My learning notes about programming.
